@@ -52,20 +52,20 @@ btn.addEventListener('click', function() {
         	obj._obstacles = [];
         }
         if (no_bombs) {
-        	var notes = [];
+        	var note_blocks = [];
         	for (var i = 0; i < obj._notes.length; i++) {
         		if (obj._notes[i]._type != 3) {
-        			notes.push(obj._notes[i]);
+        			note_blocks.push(obj._notes[i]);
         		}
         	}
-        	obj._notes = notes;
+        	obj._notes = note_blocks;
         }
 		
-		var a = document.createElement("a");
-		var json = new Blob([JSON.stringify(obj)], {type: 'text/plain'});
-		a.href = URL.createObjectURL(json);
-		a.download = file.name;
-		a.click();
+	var a = document.createElement("a");
+	var json = new Blob([JSON.stringify(obj)], {type: 'text/plain'});
+	a.href = URL.createObjectURL(json);
+	a.download = file.name;
+        a.click();
 
         notes += 'SUCCESS - downloading file\n\n';
         addNote(notes);
