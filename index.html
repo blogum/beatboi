@@ -8,28 +8,26 @@ html, body {
 	font-family: "Lucida Console", Monaco, monospace;
 }
 
-</style>
+.button {
+	background-color: #FF3939;
+	border-radius: 10px;
+	width: fit-content;
+	padding: 5px 10px;
+	cursor: pointer;
+}
 
-<link rel="shortcut icon" type="image/png" href="favicon.png">
+</style>
 
 <h1>BeatBoi</h1>
 
-Upload JSON song files and info.json<br>
-Please make sure to use the updated info.json to help clarify scores on the leaderboard<br>
+Upload JSON song files<br>
 <input type='file' id='input' multiple><br><br>
 
 <input type='checkbox' id='delete-ducks'>Delete duck walls<br><br>
 <input type='checkbox' id='delete-walls'>Delete all walls<br><br>
 <input type='checkbox' id='delete-bombs'>Delete bombs<br><br>
-
-<br><br>
-You can also slow down the song for practicing tough sections.<br>
-Note that this is a really shitty, basically useless feature. It will affect the time between notes, not the speed of the individual notes. It also doesn't change the music itself, so it will be offbeat, and the song will end before the notes do. This means you'll only be able to practice the first half of the notes if you use the 2x slower option, and so on. If you really want to practice all the notes on a slower speed, try replacing the song file with a longer song.<br>
-Seriously, think twice before changing this.<br>
-<input type='radio' name='slow-time' id='slow-time-one' checked>Normal time<br>
-<input type='radio' name='slow-time' id='slow-time-oneone'>1.1x slower<br>
-<input type='radio' name='slow-time' id='slow-time-onetwo'>1.2x slower<br>
-<input type='radio' name='slow-time' id='slow-time-two'>2x slower<br><br>
+Subtract times: <input id='subtract-time'><br>
+Extra buffer time: <input id='buffer-time'><br><br>
 
 <input type='button' value="Do it" id='submit-button'>
 
